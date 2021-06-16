@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "d893509b-eadc-4b32-91ab-19e3c2b721d1",
+		"name": "ccd-party-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get interactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Save new interaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
