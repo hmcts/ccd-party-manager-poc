@@ -13,6 +13,16 @@ management:
 
 #If you use a database then uncomment below lines and update db properties accordingly
 spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
   config:
     import: "optional:configtree:/mnt/secrets/"
   application:

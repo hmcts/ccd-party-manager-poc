@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.controllers;
+package uk.gov.hmcts.reform.ccd.party.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

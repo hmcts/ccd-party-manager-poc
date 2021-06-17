@@ -3,7 +3,48 @@
 @Library("Infrastructure")
 
 def type = "java"
-def product = "rpe"
-def component = "demo"
+def product = "ccd"
+def component = "party-manager-poc"
+
+import uk.gov.hmcts.contino.GradleBuilder
+
+GradleBuilder builder = new GradleBuilder(this, product)
 
 withPipeline(type, product, component) {}
+
+withPipeline(type, product, component) {
+
+  env.TEST_URL = "http://ccd-party-manager-poc-aat.service.core-compute-aat.internal"
+
+  after('test') {
+    builder.gradle('integration')
+  }
+
+  enableAksStagingDeployment()
+  disableLegacyDeployment()
+
+  after('test') {
+
+    junit 'build/test-results/test/**/*.xml'
+    archiveArtifacts 'build/reports/tests/test/index.html'
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/tests/test",
+      reportFiles          : "index.html",
+      reportName           : "ccd-party-manager-poc Test Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/jacoco",
+      reportFiles          : "index.html",
+      reportName           : "ccd-party-manager-poc Code Coverage Report"
+    ]
+
+  }
+}
