@@ -17,9 +17,29 @@
 		{
 			"name": "Save new interaction",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"caseId\": \"12345\",\n    \"interactionBy\": \"Bob\",\n    \"interactionType\": \"Create case\",\n    \"date\": \"2021-01-01\",\n    \"description\": \"a description\",\n    \"parentId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:4550/api/12345",
+					"host": [
+						"localhost"
+					],
+					"port": "4550",
+					"path": [
+						"api",
+						"12345"
+					]
+				}
 			},
 			"response": []
 		}
