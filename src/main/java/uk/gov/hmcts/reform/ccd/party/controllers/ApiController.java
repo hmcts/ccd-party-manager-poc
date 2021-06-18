@@ -51,6 +51,13 @@ public class ApiController {
     @GetMapping(path = "/{caseId}")
     @ApiOperation("Get interactions for case id")
     public Interaction getInteractions(@PathVariable("caseId") String caseId) {
-        return interactionService.getInteraction(caseId);
+        Interaction interaction;
+        try {
+            interaction = interactionService.getInteraction(caseId);
+        } catch (Exception e) {
+            interaction = Interaction.builder().build();
+        }
+
+        return interaction;
     }
 }

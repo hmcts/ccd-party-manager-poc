@@ -7,10 +7,45 @@
 	"item": [
 		{
 			"name": "Get interactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4550/api/12345",
+					"host": [
+						"localhost"
+					],
+					"port": "4550",
+					"path": [
+						"api",
+						"12345"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -27,7 +62,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"caseId\": \"12345\",\n    \"interactionBy\": \"Bob\",\n    \"interactionType\": \"Create case\",\n    \"date\": \"2021-01-01\",\n    \"description\": \"a description\",\n    \"parentId\": \"1\"\n}"
+					"raw": "{\n    \"ccdReferenceId\": \"12345\",\n    \"interactionBy\": 1,\n    \"interactionType\": \"Create case\",\n    \"description\": \"a description\",\n    \"parentId\": 1\n}"
 				},
 				"url": {
 					"raw": "localhost:4550/api/12345",

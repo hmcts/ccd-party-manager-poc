@@ -2,6 +2,7 @@ package uk.gov.hmcts.reform.ccd.party.repository;
 
 import org.jdbi.v3.sqlobject.config.RegisterConstructorMapper;
 import org.jdbi.v3.sqlobject.customizer.BindBean;
+import org.jdbi.v3.sqlobject.statement.GetGeneratedKeys;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import uk.gov.hmcts.reform.ccd.party.model.Interaction;
@@ -12,7 +13,8 @@ public interface InteractionRepository {
     @RegisterConstructorMapper(Interaction.class)
     Interaction findByCaseId(String caseId);
 
-    @SqlUpdate("insert into interaction (caseId, interactionBy, interactionType, date, description, parentId) "
-        + "values (:ccd_reference_id, :interaction_by, :interaction_type, :interaction_date, :description, :parent_id)")
-    void createInteraction(@BindBean Interaction interaction);
+    @SqlUpdate("insert into interaction (ccd_reference_id, interaction_by, interaction_type, description, parent_id, interaction_date) "
+        + "values (:ccdReferenceId, :interactionBy, :interactionType, :description, :parentId, now() at time zone 'UTC')")
+    @GetGeneratedKeys("id")
+    int createInteraction(@BindBean Interaction interaction);
 }

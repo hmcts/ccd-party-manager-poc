@@ -6,6 +6,7 @@ import uk.gov.hmcts.reform.ccd.party.model.Interaction;
 import uk.gov.hmcts.reform.ccd.party.repository.InteractionRepository;
 
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 import javax.sql.DataSource;
 
 public class InteractionService {
@@ -18,17 +19,16 @@ public class InteractionService {
     }
 
     public Interaction getInteraction(String caseId) {
-        Optional<Interaction> interaction =
-            Optional.of(jdbi.withExtension(InteractionRepository.class, dao -> dao.findByCaseId(caseId)));
-
-        return interaction.orElse(Interaction.builder().build());
+        return jdbi.withExtension(InteractionRepository.class, dao -> dao.findByCaseId(caseId));
     }
 
-    public void createInteraction(Interaction interaction) {
+    public int createInteraction(Interaction interaction) {
+        AtomicInteger id = new AtomicInteger();
         jdbi.useTransaction(handle -> {
             InteractionRepository dao = handle.attach(InteractionRepository.class);
-
-            dao.createInteraction(interaction);
+            id.set(dao.createInteraction(interaction));
         });
+
+        return id.get();
     }
 }
