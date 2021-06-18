@@ -5,7 +5,6 @@ import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import uk.gov.hmcts.reform.ccd.party.model.Interaction;
 import uk.gov.hmcts.reform.ccd.party.repository.InteractionRepository;
 
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.sql.DataSource;
 

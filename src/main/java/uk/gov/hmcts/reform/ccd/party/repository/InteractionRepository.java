@@ -13,8 +13,9 @@ public interface InteractionRepository {
     @RegisterConstructorMapper(Interaction.class)
     Interaction findByCaseId(String caseId);
 
-    @SqlUpdate("insert into interaction (ccd_reference_id, interaction_by, interaction_type, description, parent_id, interaction_date) "
-        + "values (:ccdReferenceId, :interactionBy, :interactionType, :description, :parentId, now() at time zone 'UTC')")
+    @SqlUpdate("insert into interaction (ccd_reference_id, interaction_by, interaction_type, description, "
+        + "parent_id, interaction_date) values (:ccdReferenceId, :interactionBy, :interactionType, :description, "
+        + ":parentId, now() at time zone 'UTC')")
     @GetGeneratedKeys("id")
     int createInteraction(@BindBean Interaction interaction);
 }

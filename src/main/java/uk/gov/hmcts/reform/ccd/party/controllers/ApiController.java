@@ -39,7 +39,7 @@ public class ApiController {
     ) {
         try {
             interactionService.createInteraction(interaction);
-        } catch (Exception e){
+        } catch (Exception e) {
             log.error("failed due to: {}", e.getMessage());
 
             return "failed";
