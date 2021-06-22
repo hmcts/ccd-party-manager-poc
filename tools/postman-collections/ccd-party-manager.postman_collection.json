@@ -6,7 +6,8 @@
 		"44db176c-32f7-5d1b-590b-6208a6f62b32",
 		"5fedeb9a-51f3-8e6a-b611-b87c12eff078",
 		"5e482757-4b33-4625-4431-dc2893964a9e",
-		"c9827f3f-6dbf-a628-4337-cc9b92cf9c9a"
+		"c9827f3f-6dbf-a628-4337-cc9b92cf9c9a",
+		"fe0a8cd2-298b-ff5e-17d0-a9d75c59819f"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -25,7 +26,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:4550/party-manager-parties/12345",
+			"url": "localhost:4550/party-manager-parties/1589282126569939",
 			"queryParams": [
 				{
 					"key": "",
@@ -42,7 +43,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624361917499,
+			"time": 1624383906009,
 			"name": "Get party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -59,7 +60,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:4550/party-manager-parties/interactions/12345",
+			"url": "localhost:4550/party-manager-parties/interactions/1589282126569939",
 			"queryParams": [
 				{
 					"key": "",
@@ -76,7 +77,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624361908623,
+			"time": 1624383912600,
 			"name": "Get party interactions",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -104,12 +105,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624361914721,
+			"time": 1624383908218,
 			"name": "Save party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
-			"rawModeData": "{\n    \"case_id\": \"12345\",\n    \"parties\" : [      \n        {\n            \"id\": 1,\n            \"name\": \"Mr Green\",\n            \"state\": \"Claim filed\",\n            \"represented_by\": \"Green Solicitors\",\n            \"type\": \"Claimant\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Miss Red\",\n            \"state\": \"Waiting\",\n            \"represented_by\": null,\n            \"type\": \"Defendant\",\n            \"parent_id\": 1\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Mr Brown\",\n            \"state\": \"Waiting\",\n            \"represented_by\": \"Brown Solicitors\",\n            \"type\": \"Defendant\",\n            \"parent_id\": 1\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Miss Yellow\",\n            \"state\": \"Waiting\",\n            \"represented_by\": \"Yellow Solicitors\",\n            \"type\": \"Defendant\",\n            \"parent_id\": 1\n        }]\n  }"
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"parties\" : [      \n        {\n            \"id\": 1,\n            \"name\": \"Mr Green\",\n            \"represented_by\": \"Green Solicitors\",\n            \"type\": \"Claimant\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Miss Red\",\n            \"represented_by\": null,\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Mr Brown\",\n            \"represented_by\": \"Brown Solicitors\",\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Miss Yellow\",\n            \"represented_by\": \"Yellow Solicitors\",\n            \"type\": \"Defendant\"\n        }]\n  }"
 		},
 		{
 			"id": "c9827f3f-6dbf-a628-4337-cc9b92cf9c9a",
@@ -133,12 +134,41 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624361911196,
-			"name": "Save party interaction",
+			"time": 1624383915012,
+			"name": "Save party interaction - Claim Issue",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
-			"rawModeData": "{\n    \"case_id\": \"12345\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"First interaction\",\n    \"description\": \"some desc\",\n    \"parent_id\": 1\n}"
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"Claim Issue\",\n    \"description\": \"The claim has been issued.\",\n    \"parent_id\": null\n}"
+		},
+		{
+			"id": "fe0a8cd2-298b-ff5e-17d0-a9d75c59819f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624383917399,
+			"name": "Save party interaction - Claim Acknowledge",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 2,\n    \"interaction_type\": \"Claim Acknowledge\",\n    \"description\": \"Claim has been acknowledged by the defendant.\",\n    \"parent_id\": 1\n}"
 		}
 	]
 }

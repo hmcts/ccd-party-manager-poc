@@ -21,10 +21,7 @@ CREATE TABLE "party" (
   "party_id" text,
   "party_name" text,
   "party_capacity" text,
-  "party_state" text,
-  "last_updated" timestamp,
   "represented_by" text,
-  "parent_id" integer,
   "ccd_reference_id" text,
   PRIMARY KEY ("id")
 );

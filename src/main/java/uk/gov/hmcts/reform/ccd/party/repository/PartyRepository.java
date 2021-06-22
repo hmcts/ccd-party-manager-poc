@@ -16,9 +16,17 @@ public interface PartyRepository {
     @RegisterConstructorMapper(Party.class)
     List<Party> findByCaseId(String caseId);
 
-    @SqlUpdate("insert into party (ccd_reference_id, party_name, party_capacity, party_state, parent_id, "
-        + "represented_by, last_updated) values (:caseId, :partyName, :partyCapacity, :partyState, "
-        + ":parentId, :representedBy, now() at time zone 'UTC')")
+    @SqlQuery("select count(*) from party where id = :id")
+    int doesPartyExist(String id);
+
+    @SqlUpdate("insert into party (ccd_reference_id, party_name, party_capacity, "
+        + "represented_by) values (:caseId, :partyName, :partyCapacity, "
+        + ":representedBy)")
     @GetGeneratedKeys("id")
     int createParty(@BindBean Party party, @Bind String caseId);
+
+    @SqlUpdate("update party set party_name = :partyName, party_capacity = :partyCapacity, "
+        + "represented_by = :representedBy "
+        + "where id = :id")
+    int updateParty(@BindBean Party party);
 }

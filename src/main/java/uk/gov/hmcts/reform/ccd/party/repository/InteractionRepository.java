@@ -11,8 +11,9 @@ import java.util.List;
 
 public interface InteractionRepository {
 
-    @SqlQuery("select (select case when represented_by is not null then represented_by else party_name end "
-        + " from party p where p.id = interaction_by) as party, * from interaction where ccd_reference_id = :caseId")
+    @SqlQuery("select (select case when represented_by is not null then concat(represented_by,' (',party_capacity,')') "
+        + "else concat(party_name,' (',party_capacity,')') end from party p where p.id = interaction_by) as party, * "
+        + "from interaction where ccd_reference_id = :caseId")
     @RegisterConstructorMapper(Interaction.class)
     List<Interaction> findByCaseId(String caseId);
 

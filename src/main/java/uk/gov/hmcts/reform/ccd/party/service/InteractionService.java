@@ -2,6 +2,7 @@ package uk.gov.hmcts.reform.ccd.party.service;
 
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
+import org.springframework.stereotype.Service;
 import uk.gov.hmcts.reform.ccd.party.model.Interaction;
 import uk.gov.hmcts.reform.ccd.party.model.Parties;
 import uk.gov.hmcts.reform.ccd.party.model.Party;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.sql.DataSource;
 
+@Service
 public class InteractionService {
 
     private final Jdbi jdbi;
@@ -44,7 +46,11 @@ public class InteractionService {
         jdbi.useTransaction(handle -> {
             PartyRepository dao = handle.attach(PartyRepository.class);
             parties.getParties().forEach(party -> {
-                id.set(dao.createParty(party, parties.getCcdReferenceId()));
+                if (dao.doesPartyExist(party.getId()) == 0) {
+                    id.set(dao.createParty(party, parties.getCcdReferenceId()));
+                } else {
+                    id.set(dao.updateParty(party));
+                }
             });
         });
 

@@ -1,11 +1,10 @@
 package uk.gov.hmcts.reform.ccd.party.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -20,22 +19,14 @@ public class Party {
     @JsonProperty("type")
     private final String partyCapacity;
 
-    @JsonProperty("state")
-    private final String partyState;
-
-    @JsonProperty("last_updated")
-    private final LocalDateTime lastUpdated;
-
     @JsonProperty("represented_by")
     private final String representedBy;
-
-    @JsonProperty("parent_id")
-    private final int parentId;
 
     public String getCcdReferenceId() {
         return ccdReferenceId;
     }
 
+    @JsonIgnore
     private final String ccdReferenceId;
 
     public void setCcdReferenceId(String ccdReferenceId) {
