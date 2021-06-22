@@ -98,12 +98,12 @@ public class ApiController {
 
     @GetMapping(path = "/interactions/{caseId}")
     @ApiOperation("Get interactions for case id")
-    public ResponseEntity<Interaction> getPartyInteractionInformation(@PathVariable("caseId") String caseId) {
-        Interaction interaction;
+    public ResponseEntity<List<Interaction>> getPartyInteractionInformation(@PathVariable("caseId") String caseId) {
+        List<Interaction> interactions;
         try {
-            interaction = interactionService.getInteraction(caseId);
+            interactions = interactionService.getInteractions(caseId);
             log.info("getInteractions response: {}",
-                     mapper.writerWithDefaultPrettyPrinter().writeValueAsString(interaction));
+                     mapper.writerWithDefaultPrettyPrinter().writeValueAsString(interactions));
         } catch (Exception e) {
             log.error("failed due to: {}", e.getMessage());
             throw new ApiException("Unable to get interactions for case id: " + caseId);
@@ -111,7 +111,7 @@ public class ApiController {
 
         return ResponseEntity
             .status(HttpStatus.OK)
-            .body(interaction);
+            .body(interactions);
     }
 
     @ExceptionHandler({ApiException.class})

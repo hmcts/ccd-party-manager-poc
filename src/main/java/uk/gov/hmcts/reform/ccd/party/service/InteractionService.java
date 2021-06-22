@@ -21,7 +21,7 @@ public class InteractionService {
             .installPlugin(new SqlObjectPlugin());
     }
 
-    public Interaction getInteraction(String caseId) {
+    public List<Interaction> getInteractions(String caseId) {
         return jdbi.withExtension(InteractionRepository.class, dao -> dao.findByCaseId(caseId));
     }
 

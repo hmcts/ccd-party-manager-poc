@@ -14,6 +14,9 @@ public class Interaction {
 
     private final String id;
 
+    @JsonProperty("party")
+    private final String party;
+
     @JsonProperty("case_id")
     private final String ccdReferenceId;
 

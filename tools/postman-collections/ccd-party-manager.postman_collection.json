@@ -42,7 +42,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624349343800,
+			"time": 1624361917499,
 			"name": "Get party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -76,8 +76,8 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624295199203,
-			"name": "Get party interaction",
+			"time": 1624361908623,
+			"name": "Get party interactions",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": []
@@ -104,7 +104,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624313772627,
+			"time": 1624361914721,
 			"name": "Save party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -133,12 +133,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624295220234,
+			"time": 1624361911196,
 			"name": "Save party interaction",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
-			"rawModeData": "{\n    \"case_id\": \"12345\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"New interaction\",\n    \"description\": \"another desc\",\n    \"parent_id\": 1\n}"
+			"rawModeData": "{\n    \"case_id\": \"12345\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"First interaction\",\n    \"description\": \"some desc\",\n    \"parent_id\": 1\n}"
 		}
 	]
 }
