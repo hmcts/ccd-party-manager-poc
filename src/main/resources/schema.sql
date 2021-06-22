@@ -18,11 +18,12 @@ CREATE TABLE "member" (
 
 CREATE TABLE "party" (
   "id"  bigint auto_increment,
-  "party_id" integer,
+  "party_id" text,
+  "party_name" text,
   "party_capacity" text,
   "party_state" text,
   "last_updated" timestamp,
-  "represented_by" integer,
+  "represented_by" text,
   "parent_id" integer,
   "ccd_reference_id" text,
   PRIMARY KEY ("id")
@@ -33,7 +34,7 @@ CREATE TABLE "interaction" (
   "interaction_by" integer,
   "interaction_date" timestamp,
   "interaction_type" text,
-  "description" json,
+  "description" text,
   "parent_id" integer,
   "ccd_reference_id" text,
   PRIMARY KEY ("id")

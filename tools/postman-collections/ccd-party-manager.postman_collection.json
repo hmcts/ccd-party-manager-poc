@@ -1,82 +1,144 @@
 {
-	"info": {
-		"_postman_id": "d893509b-eadc-4b32-91ab-19e3c2b721d1",
-		"name": "ccd-party-manager",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
+	"id": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+	"name": "ccd-party-manager",
+	"description": "",
+	"order": [
+		"44db176c-32f7-5d1b-590b-6208a6f62b32",
+		"5fedeb9a-51f3-8e6a-b611-b87c12eff078",
+		"5e482757-4b33-4625-4431-dc2893964a9e",
+		"c9827f3f-6dbf-a628-4337-cc9b92cf9c9a"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": 0,
+	"public": false,
+	"requests": [
 		{
-			"name": "Get interactions",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:4550/api/12345",
-					"host": [
-						"localhost"
-					],
-					"port": "4550",
-					"path": [
-						"api",
-						"12345"
-					],
-					"query": [
-						{
-							"key": "",
-							"value": null,
-							"disabled": true
-						}
-					]
+			"id": "44db176c-32f7-5d1b-590b-6208a6f62b32",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
 				}
-			},
-			"response": []
+			],
+			"url": "localhost:4550/party-manager-parties/12345",
+			"queryParams": [
+				{
+					"key": "",
+					"value": null,
+					"enabled": false
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624349343800,
+			"name": "Get party information",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": []
 		},
 		{
-			"name": "Save new interaction",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"ccdReferenceId\": \"12345\",\n    \"interactionBy\": 1,\n    \"interactionType\": \"Create case\",\n    \"description\": \"a description\",\n    \"parentId\": 1\n}"
-				},
-				"url": {
-					"raw": "localhost:4550/api/12345",
-					"host": [
-						"localhost"
-					],
-					"port": "4550",
-					"path": [
-						"api",
-						"12345"
-					]
+			"id": "5e482757-4b33-4625-4431-dc2893964a9e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
 				}
-			},
-			"response": []
+			],
+			"url": "localhost:4550/party-manager-parties/interactions/12345",
+			"queryParams": [
+				{
+					"key": "",
+					"value": null,
+					"enabled": false
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624295199203,
+			"name": "Get party interaction",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": []
+		},
+		{
+			"id": "5fedeb9a-51f3-8e6a-b611-b87c12eff078",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624313772627,
+			"name": "Save party information",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"12345\",\n    \"parties\" : [      \n        {\n            \"id\": 1,\n            \"name\": \"Mr Green\",\n            \"state\": \"Claim filed\",\n            \"represented_by\": \"Green Solicitors\",\n            \"type\": \"Claimant\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Miss Red\",\n            \"state\": \"Waiting\",\n            \"represented_by\": null,\n            \"type\": \"Defendant\",\n            \"parent_id\": 1\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Mr Brown\",\n            \"state\": \"Waiting\",\n            \"represented_by\": \"Brown Solicitors\",\n            \"type\": \"Defendant\",\n            \"parent_id\": 1\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Miss Yellow\",\n            \"state\": \"Waiting\",\n            \"represented_by\": \"Yellow Solicitors\",\n            \"type\": \"Defendant\",\n            \"parent_id\": 1\n        }]\n  }"
+		},
+		{
+			"id": "c9827f3f-6dbf-a628-4337-cc9b92cf9c9a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624295220234,
+			"name": "Save party interaction",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"12345\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"New interaction\",\n    \"description\": \"another desc\",\n    \"parent_id\": 1\n}"
 		}
 	]
 }
