@@ -7,7 +7,12 @@
 		"5fedeb9a-51f3-8e6a-b611-b87c12eff078",
 		"5e482757-4b33-4625-4431-dc2893964a9e",
 		"c9827f3f-6dbf-a628-4337-cc9b92cf9c9a",
-		"fe0a8cd2-298b-ff5e-17d0-a9d75c59819f"
+		"fe0a8cd2-298b-ff5e-17d0-a9d75c59819f",
+		"9e9a88ef-efc4-a1ee-c100-96a2f2d33fe1",
+		"11f53dfa-71e0-a2e6-70bc-1ae5d4d4b151",
+		"f00199ca-4bef-3962-c597-3baf9a98ed87",
+		"797edfef-4beb-32b2-5037-e11bd96fd1db",
+		"e29b946e-1340-bb1f-7ab3-86037198b113"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -15,6 +20,35 @@
 	"owner": 0,
 	"public": false,
 	"requests": [
+		{
+			"id": "11f53dfa-71e0-a2e6-70bc-1ae5d4d4b151",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624456602276,
+			"name": "Save party interaction - Extention Requested",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 3,\n    \"interaction_type\": \"Extension Request\",\n    \"description\": \"Extension requested to 28 days for response.\",\n    \"parent_id\": 1\n}"
+		},
 		{
 			"id": "44db176c-32f7-5d1b-590b-6208a6f62b32",
 			"headers": "Content-Type: application/json\n",
@@ -43,7 +77,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624383906009,
+			"time": 1624457180443,
 			"name": "Get party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -77,7 +111,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624383912600,
+			"time": 1624457177680,
 			"name": "Get party interactions",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -105,12 +139,70 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624383908218,
+			"time": 1624457174981,
 			"name": "Save party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
 			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"parties\" : [      \n        {\n            \"id\": 1,\n            \"name\": \"Mr Green\",\n            \"represented_by\": \"Green Solicitors\",\n            \"type\": \"Claimant\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Miss Red\",\n            \"represented_by\": null,\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Mr Brown\",\n            \"represented_by\": \"Brown Solicitors\",\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Miss Yellow\",\n            \"represented_by\": \"Yellow Solicitors\",\n            \"type\": \"Defendant\"\n        }]\n  }"
+		},
+		{
+			"id": "797edfef-4beb-32b2-5037-e11bd96fd1db",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624446723668,
+			"name": "Save party interaction - Additional Claim",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 4,\n    \"interaction_type\": \"Part 20 - Additional Claim\",\n    \"description\": \"Additional Claim against Black Solicitors.\",\n    \"parent_id\": 1\n}"
+		},
+		{
+			"id": "9e9a88ef-efc4-a1ee-c100-96a2f2d33fe1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624456605234,
+			"name": "Save party interaction - Defense Filed",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 2,\n    \"interaction_type\": \"Defendant Response to Claim\",\n    \"description\": \"Defence Filed.\",\n    \"parent_id\": 1\n}"
 		},
 		{
 			"id": "c9827f3f-6dbf-a628-4337-cc9b92cf9c9a",
@@ -134,12 +226,70 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624383915012,
+			"time": 1624456610610,
 			"name": "Save party interaction - Claim Issue",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
-			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"Claim Issue\",\n    \"description\": \"The claim has been issued.\",\n    \"parent_id\": null\n}"
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"Claim Issue\",\n    \"description\": \"The claim has been issued again Miss Red, Brown Solicitors and Yellow Solicitors.\",\n    \"parent_id\": null\n}"
+		},
+		{
+			"id": "e29b946e-1340-bb1f-7ab3-86037198b113",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624446718780,
+			"name": "Updated Parties after Additional Claim",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"parties\" : [      \n        {\n            \"id\": 1,\n            \"name\": \"Mr Green\",\n            \"represented_by\": \"Green Solicitors\",\n            \"type\": \"Claimant\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Miss Red\",\n            \"represented_by\": null,\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Mr Brown\",\n            \"represented_by\": \"Brown Solicitors\",\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Miss Yellow\",\n            \"represented_by\": \"Yellow Solicitors\",\n            \"type\": \"Defendant\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Mr Black\",\n            \"represented_by\": \"Black Solicitors\",\n            \"type\": \"Third Party Defendant\"\n        }]\n  }"
+		},
+		{
+			"id": "f00199ca-4bef-3962-c597-3baf9a98ed87",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624445335830,
+			"name": "Save party interaction - Extention Approved",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 3,\n    \"interaction_type\": \"Extension Approval\",\n    \"description\": \"Approves the extension request made by the defendant.\",\n    \"parent_id\": 3\n}"
 		},
 		{
 			"id": "fe0a8cd2-298b-ff5e-17d0-a9d75c59819f",
@@ -163,7 +313,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624383917399,
+			"time": 1624456608254,
 			"name": "Save party interaction - Claim Acknowledge",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
