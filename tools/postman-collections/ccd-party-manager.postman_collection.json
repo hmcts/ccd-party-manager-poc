@@ -12,7 +12,10 @@
 		"11f53dfa-71e0-a2e6-70bc-1ae5d4d4b151",
 		"f00199ca-4bef-3962-c597-3baf9a98ed87",
 		"797edfef-4beb-32b2-5037-e11bd96fd1db",
-		"e29b946e-1340-bb1f-7ab3-86037198b113"
+		"cd87d553-f3d9-8823-6298-fe8075261ad5",
+		"e29b946e-1340-bb1f-7ab3-86037198b113",
+		"5b5a9657-58a0-396d-0b4a-8c9f8897e707",
+		"96c30427-dfe1-e4a8-0d52-fc0aa403e329"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -42,7 +45,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624456602276,
+			"time": 1624522048434,
 			"name": "Save party interaction - Extention Requested",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -77,11 +80,40 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624457180443,
+			"time": 1624528789027,
 			"name": "Get party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": []
+		},
+		{
+			"id": "5b5a9657-58a0-396d-0b4a-8c9f8897e707",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624528792838,
+			"name": "Save party interaction - Counterclaim",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 3,\n    \"interaction_type\": \"Counterclaim\",\n    \"description\": \"Defendant Counterclaim against Green Solicitors.\",\n    \"parent_id\": 1\n}"
 		},
 		{
 			"id": "5e482757-4b33-4625-4431-dc2893964a9e",
@@ -139,7 +171,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624457174981,
+			"time": 1624522034052,
 			"name": "Save party information",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -176,6 +208,35 @@
 			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 4,\n    \"interaction_type\": \"Part 20 - Additional Claim\",\n    \"description\": \"Additional Claim against Black Solicitors.\",\n    \"parent_id\": 1\n}"
 		},
 		{
+			"id": "96c30427-dfe1-e4a8-0d52-fc0aa403e329",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624528796361,
+			"name": "Save party interaction - Counterclaim Acknowledge",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"Claim Acknowledge\",\n    \"description\": \"Counterclaim has been acknowledged by the claimant.\",\n    \"parent_id\": 8\n}"
+		},
+		{
 			"id": "9e9a88ef-efc4-a1ee-c100-96a2f2d33fe1",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
@@ -197,7 +258,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624456605234,
+			"time": 1624522045299,
 			"name": "Save party interaction - Defense Filed",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
@@ -226,12 +287,41 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624456610610,
+			"time": 1624522039863,
 			"name": "Save party interaction - Claim Issue",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
 			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"Claim Issue\",\n    \"description\": \"The claim has been issued again Miss Red, Brown Solicitors and Yellow Solicitors.\",\n    \"parent_id\": null\n}"
+		},
+		{
+			"id": "cd87d553-f3d9-8823-6298-fe8075261ad5",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:4550/party-manager-parties/interaction",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1624522748294,
+			"name": "Save party interaction - Additional Claim Acknowledge",
+			"description": "",
+			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
+			"responses": [],
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 5,\n    \"interaction_type\": \"Part 20 - Defence\",\n    \"description\": \"Defence filed by Part 20 defendant.\",\n    \"parent_id\": 6\n}"
 		},
 		{
 			"id": "e29b946e-1340-bb1f-7ab3-86037198b113",
@@ -284,12 +374,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624445335830,
+			"time": 1624460815362,
 			"name": "Save party interaction - Extention Approved",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",
 			"responses": [],
-			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 3,\n    \"interaction_type\": \"Extension Approval\",\n    \"description\": \"Approves the extension request made by the defendant.\",\n    \"parent_id\": 3\n}"
+			"rawModeData": "{\n    \"case_id\": \"1589282126569939\",\n    \"initiated_by\": 1,\n    \"interaction_type\": \"Extension Approval\",\n    \"description\": \"Approves the extension request made by the defendant.\",\n    \"parent_id\": 4\n}"
 		},
 		{
 			"id": "fe0a8cd2-298b-ff5e-17d0-a9d75c59819f",
@@ -313,7 +403,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1624456608254,
+			"time": 1624522042514,
 			"name": "Save party interaction - Claim Acknowledge",
 			"description": "",
 			"collectionId": "8f4219f9-9438-91be-3eb7-330c9211e1f3",

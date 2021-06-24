@@ -22,12 +22,12 @@ public class Party {
     @JsonProperty("represented_by")
     private final String representedBy;
 
+    @JsonIgnore
+    private final String ccdReferenceId;
+
     public String getCcdReferenceId() {
         return ccdReferenceId;
     }
-
-    @JsonIgnore
-    private final String ccdReferenceId;
 
     public void setCcdReferenceId(String ccdReferenceId) {
         ccdReferenceId = ccdReferenceId;

@@ -29,6 +29,9 @@ public class Interaction {
     @JsonProperty("interaction_date")
     private final LocalDateTime interactionDate;
 
+    @JsonProperty("respondents")
+    private final String respondents;
+
     @JsonProperty("description")
     private final String description;
 
