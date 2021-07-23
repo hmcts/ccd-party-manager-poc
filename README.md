@@ -13,7 +13,7 @@ Run the application in your IDE, it will spin up on port 4550.
 This project uses a h2 in memory database. It is accessible locally with the following parameters
 - url: `jdbc:h2:mem:testdb`
 - username: `sa`
-- password: `password`
+- password:
 
 The console is available at `http://localhost:4550/h2-console`
 
