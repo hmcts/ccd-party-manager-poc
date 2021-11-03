@@ -9,7 +9,7 @@
     <cpe>cpe:/a:pivotal_software:spring_security</cpe>
     <cve>CVE-2018-1258</cve>
   </suppress>
-  
+
   <suppress>
     <notes><![CDATA[
         CVE is a json vulnerability for Node projects. False positive reported at https://github.com/jeremylong/DependencyCheck/issues/2794
@@ -17,10 +17,5 @@
     <cve>CVE-2020-10663</cve>
     <cve>CVE-2020-7712</cve>
 	</suppress>
-
-  <suppress until="2021-11-25">
-    <notes>Temp suppression to unblock pipeline.</notes>
-    <cve>CVE-2021-22096</cve>
-  </suppress>
 
 </suppressions>
