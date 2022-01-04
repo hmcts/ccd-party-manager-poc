@@ -12,9 +12,8 @@ def product = "rpe"
 def component = "spring-boot-template"
 
 withNightlyPipeline(type, product, component) {
-  // Temporarily disable fortify scan stage until fortify access re-enabled
-  //enableFortifyScan('ccd-aat')
-  //after('fortify-scan') {
-  //  steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/Fortify Scan/**/*'
-  //}
+  enableFortifyScan('ccd-aat')
+  after('fortify-scan') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/Fortify Scan/**/*'
+  }
 }
