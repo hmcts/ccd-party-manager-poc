@@ -18,7 +18,7 @@
     <cve>CVE-2020-7712</cve>
 	</suppress>
 
-  <suppress until="2022-01-25">
+  <suppress until="2022-02-25">
     <notes>Temporarily suppress CVE-2021-23463 (com.h2database) until it can be addressed.  See CCD-2360.</notes>
     <cve>CVE-2021-23463</cve>
   </suppress>
