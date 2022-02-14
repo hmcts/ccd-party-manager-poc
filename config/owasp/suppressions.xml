@@ -23,4 +23,9 @@
     <cve>CVE-2021-23463</cve>
   </suppress>
 
+  <suppress until="2022-02-25">
+    <notes>Temporarily suppress CVE-2021-22060 until it can be addressed.  See CCD-2588.</notes>
+    <cve>CVE-2021-22060</cve>
+  </suppress>
+
 </suppressions>
