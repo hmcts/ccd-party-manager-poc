@@ -198,7 +198,7 @@ dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
 
-  compile group: 'com.h2database', name: 'h2'
+  compile group: 'com.h2database', name: 'h2', version: '2.1.210'
 
   implementation group: 'io.springfox', name: 'springfox-swagger2', version: versions.springfoxSwagger
 
