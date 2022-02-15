@@ -19,18 +19,11 @@
 	</suppress>
 
   <suppress until="2022-02-25">
-    <notes>Temporarily suppress CVE-2021-23463 (com.h2database) until it can be addressed.  See CCD-2360.</notes>
-    <cve>CVE-2021-23463</cve>
-  </suppress>
-
-  <suppress until="2022-02-25">
-  <notes><![CDATA[Temporary suppression pending investigation]]></notes>
-  <cve>CVE-2021-22060</cve>
-  <cve>CVE-2022-23181</cve>
-  <cve>CVE-2022-23221</cve>
-  <cve>CVE-2021-42392</cve>
-  <cve>CVE-2021-42550</cve>
-  <cve>CVE-2021-44832</cve>
+    <notes><![CDATA[Temporary suppression pending investigation]]></notes>
+    <cve>CVE-2021-22060</cve>
+    <cve>CVE-2022-23181</cve>
+    <cve>CVE-2021-42550</cve>
+    <cve>CVE-2021-44832</cve>
   </suppress>
 
 </suppressions>
