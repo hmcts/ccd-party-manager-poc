@@ -36,7 +36,7 @@
   
   <suppress>
     <notes><![CDATA[
-        Fixing the CVE issue for nightly build issues. 
+        Temporarily suppressing CVE flag in pipelines. 
     ]]></notes>
     <cve>CVE-2022-22950</cve>
     <cve>CVE-2022-22965</cve>
