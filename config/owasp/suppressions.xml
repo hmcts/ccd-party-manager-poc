@@ -33,5 +33,13 @@
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-beans@.*$</packageUrl>
     <vulnerabilityName>CVE-2022-22965</vulnerabilityName>
   </suppress>
+  
+  <suppress>
+    <notes><![CDATA[
+        Temporarily suppressing CVE flag in pipelines. 
+    ]]></notes>
+    <cve>CVE-2022-22950</cve>
+    <cve>CVE-2022-22965</cve>
+  </suppress>
 
 </suppressions>
